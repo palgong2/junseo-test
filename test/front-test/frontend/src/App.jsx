@@ -6,7 +6,9 @@ function App() {
 
   const callBackend = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/hello");
+      const response = await fetch(
+        "https://my-render-backend-5x5u.onrender.com/api/hello",
+      );
       const data = await response.json();
       setMessage(data.message);
     } catch (error) {
